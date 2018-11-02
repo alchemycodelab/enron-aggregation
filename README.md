@@ -29,7 +29,7 @@ internet connection.
 
 ## Example document
 
-```json
+```js
 {
     "_id" : ObjectId("4f16fca5d1e2d3237100927d"),
     "body" : "Your just a little jokester today - What do you mean \"try and fit me in your schedule\"     I will be there - and you will make the time for me -Because you have NO OTHER CLIENTS!!!!\n\nthanks for the laughs\ni love you",
