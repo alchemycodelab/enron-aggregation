@@ -1,8 +1,6 @@
 # Aggregation practice
 
-Mess around with aggregations. There's nothing special
-about them, there's nothing magic about them. Play
-around with the sample enron email data.
+Mess around with aggregations.Play around with the sample enron email data.
 
 There are two aggregates to create as part of this
 repo: `lib/emails-per-day.js` and `lib/email-recipients.js`.
