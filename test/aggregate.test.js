@@ -7,9 +7,9 @@ describe('aggregates enron messages', () => {
         return collection().aggregate(emailsPerDay)
             .toArray()
             .then(([{ min, max, avg }]) => {
-                expect(min).toEqual(1);
-                expect(max).toEqual(20);
-                expect(avg).toEqual(6.103658536585366);
+                expect(min).toEqual(6);
+                expect(max).toEqual(1216);
+                expect(avg).toEqual(400.78403755868544);
             });
     });
 
@@ -22,8 +22,8 @@ describe('aggregates enron messages', () => {
                     expect(to).toHaveProperty('count');
                 });
 
-                expect(tos[0]._id).toEqual('don.baughman@enron.com');
-                expect(tos[0].count).toEqual(188);
+                expect(tos[0]._id).toEqual('jeff.dasovich@enron.com');
+                expect(tos[0].count).toEqual(6535);
             });
     });
 });

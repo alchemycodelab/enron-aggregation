@@ -1,19 +1,16 @@
 const { MongoClient } = require('mongodb');
 
-let close = null;
-let collection = null;
+let client = null;
 beforeAll(() => {
-    return MongoClient.connect('mongodb://alchemy:s3cret@ds249233.mlab.com:49233/enron', { useNewUrlParser: true })
-        .then(client => {
-            collection = client.db('enron').collection('enron_messages');
-            close = client.close.bind(client);
-            return collection;
+    return MongoClient.connect('mongodb://alchemy:s3cret@ds249233.mlab.com:49233/enron', { useNewUrlParser: true, useUnifiedTopology: true })
+        .then(c => {
+            client = c;
         });
 });
 
 afterAll(() => {
-    return close(true);
+    return client.close();
 });
 
 
-module.exports = () => collection;
+module.exports = () => client.db('enron').collection('messages');

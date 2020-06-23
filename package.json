@@ -7,6 +7,9 @@
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
+  "jest": {
+    "testTimeout": 20000
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
